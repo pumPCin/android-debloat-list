@@ -1,14 +1,14 @@
 <?php
 /* SPDX-License-Identifier: AGPL-3.0-or-later */
 
-const LAST_COMMIT = "11f27c671cba278d71296cdef4c5a5dba06add5e";
-const THIS_COMMIT = "11f27c671cba278d71296cdef4c5a5dba06add5e";
+const LAST_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
+const THIS_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
 
 const COLOR_RED = 31;
 const COLOR_GREEN = 32;
 
 function get_link(string $commit_hash): string {
-    return "https://raw.githubusercontent.com/0x192/universal-android-debloater/$commit_hash/resources/assets/uad_lists.json";
+    return "https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/$commit_hash/resources/assets/uad_lists.json";
 }
 
 $old_list_link = get_link(LAST_COMMIT);
