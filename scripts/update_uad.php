@@ -1,8 +1,8 @@
 <?php
 /* SPDX-License-Identifier: AGPL-3.0-or-later */
 
-const LAST_COMMIT = "main";
-const THIS_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
+const LAST_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
+const THIS_COMMIT = "main";
 
 const COLOR_RED = 31;
 const COLOR_GREEN = 32;
