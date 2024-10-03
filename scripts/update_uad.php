@@ -1,8 +1,8 @@
 <?php
 /* SPDX-License-Identifier: AGPL-3.0-or-later */
 
-const LAST_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
-const THIS_COMMIT = "main";
+const THIS_COMMIT = "282ec9b69197a78b72346204ed58c3c76b905e5a";
+const LAST_COMMIT = "main";
 
 const COLOR_RED = 31;
 const COLOR_GREEN = 32;
@@ -11,16 +11,16 @@ function get_link(string $commit_hash): string {
     return "https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/$commit_hash/resources/assets/uad_lists.json";
 }
 
-$old_list_link = get_link(LAST_COMMIT);
-$new_list_link = get_link(THIS_COMMIT);
-
-if ($old_list_link == $new_list_link) {
-    echo "Already up-to-date.\n";
-    exit(0);
-}
+$old_list_link = get_link(THIS_COMMIT);
+$new_list_link = get_link(LAST_COMMIT);
 
 $old_list = json_decode(file_get_contents($old_list_link), true);
 $new_list = json_decode(file_get_contents($new_list_link), true);
+
+if ($old_list == $new_list) {
+    echo "Already up-to-date.\n";
+    exit(0);
+}
 
 // Iterate over the new list to find changes w.r.t old list. Delete the matched item from the old list
 foreach ($new_list as $item) {
